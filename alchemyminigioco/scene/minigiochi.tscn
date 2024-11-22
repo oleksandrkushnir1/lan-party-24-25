@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1hysy784nfin"]
+
+[ext_resource type="Script" path="res://scene/game_manager.gd" id="1_wtknf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftlqw"]
+size = Vector2(1154, 642)
+
+[node name="Minigiochi" type="Node2D"]
+position = Vector2(4, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(571, 320)
+shape = SubResource("RectangleShape2D_ftlqw")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_wtknf")
