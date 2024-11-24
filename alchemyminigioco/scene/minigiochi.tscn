@@ -1,18 +1,153 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1hysy784nfin"]
+[gd_scene load_steps=12 format=3 uid="uid://b1hysy784nfin"]
 
-[ext_resource type="Script" path="res://scene/game_manager.gd" id="1_wtknf"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wtknf"]
+[ext_resource type="Texture2D" uid="uid://bvgfreaxwxisw" path="res://assets/1000_F_468133102_0Ca4B6NCUcbgzgiOfK6qP6XvqYR0vuJC.jpg" id="2_u11mo"]
+[ext_resource type="Script" path="res://scene/control.gd" id="3_g2la1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftlqw"]
-size = Vector2(1154, 642)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_axoia"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v7u6e"]
+normal = Vector2(1, 0)
+distance = -356.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ffe0l"]
+normal = Vector2(0.0247858, 0.999693)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vuo8t"]
+normal = Vector2(-0.999916, 0.01293)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1504m"]
+bg_color = Color(0.509804, 0.65098, 0.380392, 0.541176)
+
+[sub_resource type="Theme" id="Theme_w5rwj"]
+Label/styles/normal = SubResource("StyleBoxFlat_1504m")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04whp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.596232, 0.638707, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_ldnnu"]
+Label/constants/line_spacing = 4
+Label/font_sizes/font_size = 36
+Label/styles/normal = SubResource("StyleBoxFlat_04whp")
 
 [node name="Minigiochi" type="Node2D"]
 position = Vector2(4, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-3, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(571, 320)
-shape = SubResource("RectangleShape2D_ftlqw")
+position = Vector2(577, 649)
+shape = SubResource("WorldBoundaryShape2D_axoia")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(358, 278)
+shape = SubResource("WorldBoundaryShape2D_v7u6e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(499, -3)
+shape = SubResource("WorldBoundaryShape2D_ffe0l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1153, 347)
+shape = SubResource("WorldBoundaryShape2D_vuo8t")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_wtknf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(572, 321)
+scale = Vector2(1.14939, 0.968158)
+texture = ExtResource("2_u11mo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 479.0
+offset_right = 1089.0
+offset_bottom = 609.0
+theme = SubResource("Theme_w5rwj")
+
+[node name="Button7" type="Button" parent="Label"]
+offset_left = 603.0
+offset_top = 25.0
+offset_right = 700.0
+offset_bottom = 111.0
+
+[node name="Button4" type="Button" parent="Label"]
+offset_left = 461.0
+offset_top = 23.0
+offset_right = 558.0
+offset_bottom = 109.0
+
+[node name="Button6" type="Button" parent="Label"]
+offset_left = 879.0
+offset_top = 25.0
+offset_right = 976.0
+offset_bottom = 111.0
+
+[node name="Button5" type="Button" parent="Label"]
+offset_left = 745.0
+offset_top = 25.0
+offset_right = 842.0
+offset_bottom = 111.0
+pivot_offset = Vector2(70, 40)
+
+[node name="Button2" type="Button" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.208
+anchor_right = 0.041
+anchor_bottom = 0.208
+offset_left = -0.287003
+offset_top = -0.0400009
+offset_right = 96.713
+offset_bottom = 85.96
+text = "H"
+
+[node name="Button3" type="Button" parent="Label"]
+offset_left = 319.0
+offset_top = 23.0
+offset_right = 416.0
+offset_bottom = 109.0
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 23.0
+offset_right = 277.0
+offset_bottom = 109.0
+text = "O"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 182.0
+offset_top = 23.0
+offset_right = 222.0
+offset_bottom = 63.0
+script = ExtResource("3_g2la1")
+
+[node name="Label2" type="Label" parent="Control"]
+offset_left = -136.0
+offset_top = -15.0
+offset_right = 149.0
+offset_bottom = 39.0
+theme = SubResource("Theme_ldnnu")
+text = "Timer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 90.0
+
+[connection signal="button_down" from="Label/Button2" to="GameManager" method="_on_button_2_button_down"]
+[connection signal="button_down" from="Label/Button" to="GameManager" method="_on_button_button_down"]

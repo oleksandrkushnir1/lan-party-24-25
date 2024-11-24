@@ -1,31 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf16jx31swk8f"]
+[gd_scene load_steps=5 format=3 uid="uid://cf16jx31swk8f"]
 
 [ext_resource type="Script" path="res://scripts/elemento.gd" id="1_m0f0d"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="2_r245q"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vh2ll"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s6m7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a81gi"]
-size = Vector2(43, 25)
+size = Vector2(41, 21.5)
 
-[node name="Elemento" type="CharacterBody2D"]
+[node name="Elemento" type="Area2D"]
 position = Vector2(86, 95)
 script = ExtResource("1_m0f0d")
+element_name = "Elemento"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, -1)
-scale = Vector2(43, 23)
-texture = SubResource("PlaceholderTexture2D_vh2ll")
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(2, -0.999997)
+scale = Vector2(0.0820313, 0.0429687)
+texture = SubResource("NoiseTexture2D_s6m7u")
 
 [node name="Button" type="Button" parent="."]
 offset_left = -20.0
 offset_top = -13.0
 offset_right = 24.0
 offset_bottom = 11.0
+script = ExtResource("2_r245q")
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -1)
+light_mask = 0
+visibility_layer = 0
+position = Vector2(1.5, -0.75)
 shape = SubResource("RectangleShape2D_a81gi")
 
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
