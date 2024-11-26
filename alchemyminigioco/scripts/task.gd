@@ -6,7 +6,7 @@ var lvl2 : String
 var counterlvl = 0
 var base : String
 var completato = false
-
+var open = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Label.text = base
@@ -27,4 +27,14 @@ func _on_button_button_down() -> void:
 	else:
 		$Label.text = base + " --> " + lvl2
 		$Button.hide()
+	pass # Replace with function body.
+
+
+func _on_scomparsa_button_down() -> void:
+	if(open):
+		self.move_local_x(500)
+		open = false;
+	else:
+		self.move_local_x(-500)
+		open = true;
 	pass # Replace with function body.

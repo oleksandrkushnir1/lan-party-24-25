@@ -7,7 +7,9 @@ var sprite = load("res://icon.svg")
 
 func _ready() -> void: 
 	game_manager = get_node("/root/Minigiochi/GameManager")
-	$Sprite.texture = sprite
+	$Button.size = Vector2(80,80)
+	$Button.icon = sprite
+	print($Button.size)
 	pass 
 
 func _process(delta: float) -> void: 
