@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b1hysy784nfin"]
+[gd_scene load_steps=25 format=4 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wtknf"]
 [ext_resource type="Texture2D" uid="uid://dqeikpud5dipm" path="res://assets/Elementi/Zolfo.png" id="2_6ye2b"]
@@ -28,6 +28,8 @@ bg_color = Color(0.509804, 0.65098, 0.380392, 0.541176)
 
 [sub_resource type="Theme" id="Theme_w5rwj"]
 Label/styles/normal = SubResource("StyleBoxFlat_1504m")
+
+[sub_resource type="SystemFont" id="SystemFont_rwb73"]
 
 [sub_resource type="Image" id="Image_abjde"]
 data = {
@@ -1703,6 +1705,7 @@ offset_left = 622.0
 offset_top = 23.0
 offset_right = 719.0
 offset_bottom = 114.0
+theme_override_fonts/font = SubResource("SystemFont_rwb73")
 icon = ExtResource("2_6ye2b")
 flat = true
 icon_alignment = 1

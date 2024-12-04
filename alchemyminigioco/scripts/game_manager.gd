@@ -32,27 +32,36 @@ var assets = {
 	"K": load("res://assets/Elementi/Potassio.png"), 
 	"Na" : load("res://assets/Elementi/Sodio.png"), 
 	"Acqua" : load("res://assets/Task/Acqua.png"),
+	"O2" : load("res://assets/CombinazioniIntermedie/O2.png"),
+	"H2" : load("res://assets/CombinazioniIntermedie/H2.png"),
 	"Anidride carbonica" : load("res://assets/Task/AnidrideCarbonica.png"),
-	"Metano":load("res://assets/Task/Metano.png")
+	"Metano":load("res://assets/Task/Metano.png"),
+	"Sodio cloruro(sale da cucina)": load("res://assets/Task/sale.png"),
+	"Ozono": load("res://assets/Task/Ozono.png"),
+	"Monossido di carbonio/CO" : load("res://assets/CombinazioniIntermedie/CO.png"),
+	"Cianuro/CN" : load("res://assets/CombinazioniIntermedie/CN.png"),
+	"Metilene/CH2" : load("res://assets/CombinazioniIntermedie/CH2.png"),
+	"Ione ammoniuro/NH2": load("res://assets/CombinazioniIntermedie/NH2.png"),
+	"Ammoniaca":load("res://assets/CombinazioniIntermedie/Amoniaca.png"),
+	"Acido cloridrico":load("res://assets/Task/AcidoTentativo.png"),
+	"Cianuro di potassio":load("res://assets/Task/Maschera.png")
 	}
 var combinazioni = { 
-	"Acqua": ["H2", "O"], 
-	"H2": ["H", "H"],
-	"O2": ["O", "O"] ,
-	"Anidride carbonica" : ["C", "O2"],
-	"Monossido di carboni/CO" : ["C","O"],
-	"Anidride carbonica2" : ["Monossido di carboni/CO","O"],
-	"Metilene/CH2" : ["C", "H2"],
-	"Metano" : ["Metilene/CH2","H2"],
-	"Sodio cloruro(sale da cucina)" : ["Na","Cl"],
-	"Ammoniaca": ["Ione ammoniuro/NH2","H"],
-	"Ione ammoniuro/NH2" : ["N","H2"],
-	"Acido cloridrico" : ["H", "Cl"],
-	"Ozono":["O2","O"],
-	"Monossido di Carbonio" : ["C","O"],
-	"Cianuro/CN": ["C","N"],
-	"Cianuro di potassio": ["K","Cianuro/CN"],
-	"Etilene":["Metilene/CH2","Metilene/CH2"]
+	"Acqua": ["H2", "O"], #esiste
+	"H2": ["H", "H"], #esiste
+	"O2": ["O", "O"] , #esiste
+	"Anidride carbonica" : ["C", "O2"], #esiste
+	"Monossido di carbonio/CO" : ["C","O"], #esiste
+	"Anidride carbonica2" : ["Monossido di carboni/CO","O"], #esiste
+	"Metilene/CH2" : ["C", "H2"], #esiste
+	"Metano" : ["Metilene/CH2","H2"], #esiste
+	"Sodio cloruro(sale da cucina)" : ["Na","Cl"], #esiste
+	"Ammoniaca": ["Ione ammoniuro/NH2","H"], #esiste
+	"Ione ammoniuro/NH2" : ["N","H2"],#esiste
+	"Acido cloridrico" : ["H", "Cl"], #esiste
+	"Ozono":["O2","O"], #esiste
+	"Cianuro/CN": ["C","N"], #esiste
+	"Cianuro di potassio": ["K","Cianuro/CN"], #esiste
 	}
 var spawn_points = []
 # Numero iniziale di elementi da spawnare
@@ -71,7 +80,7 @@ func spawn_element(position: Vector2, name):
 	if name in assets:
 		instance.sprite = assets[name]
 	else :
-		instance.sprite = load("res://icon.svg")
+		instance.sprite = load("res://icon.png")
 	add_child(instance)
 	for i in range(taskTracker.size()):
 		print(taskTracker[i])
