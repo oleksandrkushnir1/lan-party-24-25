@@ -3,13 +3,13 @@ extends Node
 var element_scene = preload("res://scene/elemento.tscn")
 var task_scene = preload("res://scene/task.tscn") 
 # Punti di spawn
-var tasks = ["Anidride carbonica",'Acqua',"Metano","Sodio cloruro(sale da cucina)","Ammoniaca","Acido cloridrico"]
+var tasks = ["Anidride carbonica",'Acqua',"Metano","Cloruro di sodio(sale da cucina)","Ammoniaca","Acido cloridrico"]
 var taskTracker = []
 var formulaLVL1 = {
 	"Acqua" : "H2 + ?", 
 	"Anidride carbonica" :  "C + ?", 
 	"Metano" : "C? + H2", 
-	"Sodio cloruro(sale da cucina)" : "Na + ?",
+	"Cloruro di sodio(sale da cucina)" : "Na + ?",
 	"Ammoniaca" : "NH2 + ?", 
 	"Acido cloridrico" : "H + ?"
 }
@@ -17,7 +17,7 @@ var formulaLVL2 = {
 	"Acqua" : "H2 + O", 
 	"Anidride carbonica" : "C + O2", 
 	"Metano" : "CH2 + H2", 
-	"Sodio cloruro(sale da cucina)" : "Na + Cl",
+	"Cloruro di sodio(sale da cucina)" : "Na + Cl",
 	"Ammoniaca" :"NH2 + H", 
 	"Acido cloridrico" : "H + Cl"
 	}
@@ -36,7 +36,7 @@ var assets = {
 	"H2" : load("res://assets/CombinazioniIntermedie/H2.png"),
 	"Anidride carbonica" : load("res://assets/Task/AnidrideCarbonica.png"),
 	"Metano":load("res://assets/Task/Metano.png"),
-	"Sodio cloruro(sale da cucina)": load("res://assets/Task/sale.png"),
+	"Cloruro di sodio(sale da cucina)": load("res://assets/Task/sale.png"),
 	"Ozono": load("res://assets/Task/Ozono.png"),
 	"Monossido di carbonio/CO" : load("res://assets/CombinazioniIntermedie/CO.png"),
 	"Cianuro/CN" : load("res://assets/CombinazioniIntermedie/CN.png"),
@@ -55,7 +55,7 @@ var combinazioni = {
 	"Anidride carbonica2" : ["Monossido di carboni/CO","O"], #esiste
 	"Metilene/CH2" : ["C", "H2"], #esiste
 	"Metano" : ["Metilene/CH2","H2"], #esiste
-	"Sodio cloruro(sale da cucina)" : ["Na","Cl"], #esiste
+	"Cloruro di sodio(sale da cucina)" : ["Na","Cl"], #esiste
 	"Ammoniaca": ["Ione ammoniuro/NH2","H"], #esiste
 	"Ione ammoniuro/NH2" : ["N","H2"],#esiste
 	"Acido cloridrico" : ["H", "Cl"], #esiste
@@ -63,14 +63,25 @@ var combinazioni = {
 	"Cianuro/CN": ["C","N"], #esiste
 	"Cianuro di potassio": ["K","Cianuro/CN"], #esiste
 	}
-var spawn_points = []
 # Numero iniziale di elementi da spawnare
 var initial_count = 10
 var instance = element_scene.instantiate()
 var instanceTasks = task_scene.instantiate()
 var position : Vector2
 func _ready():
-	taskTracker = [spawn_task(Vector2(0, 100), "Metano"),spawn_task(Vector2(0, 200), "Acqua"),spawn_task(Vector2(0, 300), "Anidride carbonica") ]
+	var b = RandomNumberGenerator.new().randi_range(0,5);
+	var task1 = tasks[b];
+	tasks.remove_at(b);
+	b = RandomNumberGenerator.new().randi_range(0,4);
+	var task2 = tasks[b];
+	tasks.remove_at(b);
+	b = RandomNumberGenerator.new().randi_range(0,3);
+	var task3 = tasks[b];
+	tasks.remove_at(b)
+	b = RandomNumberGenerator.new().randi_range(0,2);
+	var task4 = tasks[b];
+	tasks.remove_at(b)
+	taskTracker = [spawn_task(Vector2(0, 70), task1),spawn_task(Vector2(0, 140), task2),spawn_task(Vector2(0, 210), task3),spawn_task(Vector2(0, 280), task4) ]
 
 func spawn_element(position: Vector2, name):
 	instance = element_scene.instantiate()
@@ -97,7 +108,7 @@ func spawn_task(posizione: Vector2, name) -> Node2D:
 	instanceTasks.position = posizione
 	add_child(instanceTasks)
 	return instanceTasks
-	
+
 func handle_collision(node1: Node2D, node2: Node2D) -> void: 
 	print("Collision detected between elements with IDs: ", node1.element_name, " and ", node2.element_name)
 	for new_element in combinazioni:
@@ -107,15 +118,9 @@ func handle_collision(node1: Node2D, node2: Node2D) -> void:
 			node2.queue_free()
 			spawn_element(node1.position, new_element)
 
-
-
-
 func _on_s_button_down() -> void:
 	spawn_element(Vector2(200,300), "S")
 	pass # Replace with function body.
-
-
-
 
 func _on_cl_button_down() -> void:
 	spawn_element(Vector2(200,300), "Cl")
@@ -143,4 +148,26 @@ func _on_h_button_down() -> void:
 
 func _on_o_button_down() -> void:
 	spawn_element(Vector2(200,300), "O")
+	pass # Replace with function body.
+
+
+func _on_label_2_mouse_entered() -> void:
+	
+	pass # Replace with function body.
+
+
+
+
+
+
+
+func _on_area_2d_mouse_shape_entered(shape_idx: int) -> void:
+	var video_sprite: Sprite2D = $"../VideoTutorial/VideoSprite"
+	video_sprite.visible = true;
+	pass # Replace with function body.
+
+
+func _on_area_2d_mouse_shape_exited(shape_idx: int) -> void:
+	var video_sprite: Sprite2D = $"../VideoTutorial/VideoSprite"
+	video_sprite.visible = false;
 	pass # Replace with function body.
