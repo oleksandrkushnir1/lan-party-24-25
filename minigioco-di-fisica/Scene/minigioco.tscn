@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://xtd716pohaus"]
+
+[ext_resource type="PackedScene" uid="uid://cnbpy7vs1c7gu" path="res://Scene/player.tscn" id="1_h4ygs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qihh5"]
+
+[node name="Minigioco" type="Node2D"]
+
+[node name="Sfondo" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicaDiSottofondo" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="Player" parent="." instance=ExtResource("1_h4ygs")]
+position = Vector2(165, 138)
+
+[node name="Pavimento" type="StaticBody2D" parent="."]
+position = Vector2(91, 507)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pavimento"]
+shape = SubResource("WorldBoundaryShape2D_qihh5")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnbpy7vs1c7gu"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_74tpl"]
+[ext_resource type="Texture2D" uid="uid://v2luppfytwad" path="res://Assets/Omino(temp).png" id="1_f4rkw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8dxb"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"push",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ey0d"]
+size = Vector2(108.5, 107.25)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_74tpl")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x8dxb")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="Omino(temp)" type="Sprite2D" parent="."]
+position = Vector2(55, 53.75)
+scale = Vector2(0.216, 0.215)
+texture = ExtResource("1_f4rkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(54, 54)
+shape = SubResource("RectangleShape2D_7ey0d")
