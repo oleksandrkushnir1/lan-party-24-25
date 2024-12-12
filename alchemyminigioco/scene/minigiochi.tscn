@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=24 format=4 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wtknf"]
@@ -1660,11 +1661,20 @@ Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 36
 Label/fonts/font = SubResource("FontFile_j4hld")
 Label/styles/normal = SubResource("StyleBoxFlat_04whp")
+=======
+[gd_scene load_steps=3 format=3 uid="uid://b1hysy784nfin"]
+
+[ext_resource type="Script" path="res://scene/game_manager.gd" id="1_wtknf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftlqw"]
+size = Vector2(1154, 642)
+>>>>>>> e343b71c1ac94517abdfc854b8eae761b154a5b2
 
 [node name="Minigiochi" type="Node2D"]
 position = Vector2(4, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(-3, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -1813,3 +1823,12 @@ position = Vector2(574, 318)
 [connection signal="button_down" from="Label/C" to="GameManager" method="_on_c_button_down"]
 [connection signal="button_down" from="Label/H" to="GameManager" method="_on_h_button_down"]
 [connection signal="button_down" from="Label/O" to="GameManager" method="_on_o_button_down"]
+=======
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(571, 320)
+shape = SubResource("RectangleShape2D_ftlqw")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_wtknf")
+>>>>>>> e343b71c1ac94517abdfc854b8eae761b154a5b2
