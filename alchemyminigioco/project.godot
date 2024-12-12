@@ -11,10 +11,9 @@ config_version=5
 [application]
 
 config/name="AlchemyMiniGioco"
-<<<<<<< HEAD
 run/main_scene="res://scene/minigiochi.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon2.svg"
 
 [display]
 
@@ -29,8 +28,3 @@ project/assembly_name="AlchemyMiniGioco"
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-=======
-run/main_scene="res://scene/elemento.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
->>>>>>> e343b71c1ac94517abdfc854b8eae761b154a5b2

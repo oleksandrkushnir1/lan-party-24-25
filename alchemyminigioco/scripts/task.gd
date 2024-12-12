@@ -17,6 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if completato == true:
 		$Label.text = "completato"
+		$Button.hide()
 	pass
 
 
@@ -32,9 +33,9 @@ func _on_button_button_down() -> void:
 
 func _on_scomparsa_button_down() -> void:
 	if(open):
-		self.move_local_x(500)
+		self.move_local_x(400)
 		open = false;
 	else:
-		self.move_local_x(-500)
+		self.move_local_x(-400)
 		open = true;
 	pass # Replace with function body.
