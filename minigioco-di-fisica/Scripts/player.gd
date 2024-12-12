@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 5000
-
+var SPEED = 1000
 
 func _physics_process(delta: float) -> void:
 	
-	
+	"""
+	Questo blocco definisce il movimento.
+	Il personaggi si muove solo se un tasto è permuto.
+	"""
 	if Input.is_action_pressed("Destra"):
 		velocity.x = (SPEED*delta)
 	elif Input.is_action_pressed("Sinistra"):

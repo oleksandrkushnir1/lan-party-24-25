@@ -20,7 +20,7 @@ autoplay = true
 position = Vector2(165, 138)
 
 [node name="Pavimento" type="StaticBody2D" parent="."]
-position = Vector2(91, 507)
+position = Vector2(0, 553)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pavimento"]
