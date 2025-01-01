@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://xtd716pohaus"]
+[gd_scene load_steps=5 format=3 uid="uid://xtd716pohaus"]
 
 [ext_resource type="PackedScene" uid="uid://cnbpy7vs1c7gu" path="res://Scene/player.tscn" id="1_h4ygs"]
+[ext_resource type="PackedScene" uid="uid://dcuq1eu6y1otj" path="res://Scene/cassa_di_legno.tscn" id="2_fp5jy"]
+[ext_resource type="PackedScene" uid="uid://mux57v0khy3g" path="res://Scene/cassa_di_metallo.tscn" id="3_ua0s2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qihh5"]
 
@@ -25,3 +27,9 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pavimento"]
 shape = SubResource("WorldBoundaryShape2D_qihh5")
+
+[node name="Cassa di legno" parent="." instance=ExtResource("2_fp5jy")]
+position = Vector2(471, 2)
+
+[node name="Cassa di metallo" parent="." instance=ExtResource("3_ua0s2")]
+position = Vector2(337, -62)
