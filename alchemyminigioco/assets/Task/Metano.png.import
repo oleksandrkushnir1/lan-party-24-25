@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsynbw7vrvbsi"
-path="res://.godot/imported/metano.png-1eb392a4bfd2d738112f7a182bf6a556.ctex"
+path="res://.godot/imported/Metano.png-520455fc3a5abc989e6bf67898911029.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Task/metano.png"
-dest_files=["res://.godot/imported/metano.png-1eb392a4bfd2d738112f7a182bf6a556.ctex"]
+source_file="res://assets/Task/Metano.png"
+dest_files=["res://.godot/imported/Metano.png-520455fc3a5abc989e6bf67898911029.ctex"]
 
 [params]
 

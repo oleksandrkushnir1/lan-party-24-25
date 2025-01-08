@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://b1hysy784nfin"]
+[gd_scene load_steps=31 format=3 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wtknf"]
 [ext_resource type="Texture2D" uid="uid://ceu5fty3kcqfr" path="res://assets/Elementi/Zolfo.png" id="2_6ye2b"]
+[ext_resource type="Texture2D" uid="uid://xhvy1g3lu62v" path="res://assets/sfondi/wp13022004-fantasy-city-4k-wallpapers.jpg" id="2_vifwl"]
 [ext_resource type="Texture2D" uid="uid://yy67y7a2j0vn" path="res://assets/Elementi/Cloro.png" id="3_e8ml3"]
 [ext_resource type="Script" path="res://scripts/control.gd" id="3_g2la1"]
 [ext_resource type="Texture2D" uid="uid://bh85wd0bijid8" path="res://assets/Elementi/Sodio.png" id="4_lol0l"]
@@ -12,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://u4hyd2k6iiov" path="res://assets/Elementi/Idrogeno.png" id="8_byl4x"]
 [ext_resource type="FontFile" uid="uid://hdk1dxluhxk3" path="res://assets/fonts/alagard/alagard.ttf" id="11_gcnby"]
 [ext_resource type="Texture2D" uid="uid://brh6deofre2e" path="res://icons8-question-mark-78.png" id="12_1y6dq"]
-[ext_resource type="Texture2D" uid="uid://bqn40yjmw1b0x" path="res://scene/icon2.svg" id="12_dmce7"]
+[ext_resource type="Texture2D" uid="uid://bqn40yjmw1b0x" path="res://assets/icon2.svg" id="12_dmce7"]
 [ext_resource type="Texture2D" uid="uid://ctsvuj2f177ij" path="res://assets/video/1.PNG" id="13_45qle"]
 [ext_resource type="Texture2D" uid="uid://c0pqpvfmttph6" path="res://assets/video/2.PNG" id="14_l7hr6"]
 [ext_resource type="Texture2D" uid="uid://b27i0w88ucdtb" path="res://assets/video/3.PNG" id="15_66fcg"]
@@ -30,7 +31,7 @@ normal = Vector2(0.0247858, 0.999693)
 normal = Vector2(-0.999916, 0.01293)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1504m"]
-bg_color = Color(0.509804, 0.65098, 0.380392, 0.541176)
+bg_color = Color(0.355436, 0.025635, 0.0241121, 0.541176)
 
 [sub_resource type="Theme" id="Theme_w5rwj"]
 Label/styles/normal = SubResource("StyleBoxFlat_1504m")
@@ -42,7 +43,7 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.596232, 0.638707, 0, 1)
+bg_color = Color(0.644396, 0.10083, 0, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -62,7 +63,22 @@ Label/font_sizes/font_size = 36
 Label/styles/normal = SubResource("StyleBoxFlat_04whp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olieg"]
-size = Vector2(92.25, 48.25)
+size = Vector2(110.125, 64.125)
+
+[sub_resource type="Animation" id="Animation_oy7x7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VideoSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_dmce7")]
+}
 
 [sub_resource type="Animation" id="Animation_of3jc"]
 resource_name = "show_video"
@@ -79,21 +95,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("13_45qle"), ExtResource("14_l7hr6"), ExtResource("15_66fcg")]
-}
-
-[sub_resource type="Animation" id="Animation_oy7x7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VideoSprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("12_dmce7")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lnm4o"]
@@ -113,6 +114,9 @@ position = Vector2(577, 649)
 shape = SubResource("WorldBoundaryShape2D_axoia")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 position = Vector2(358, 278)
 shape = SubResource("WorldBoundaryShape2D_v7u6e")
 
@@ -128,10 +132,17 @@ shape = SubResource("WorldBoundaryShape2D_vuo8t")
 script = ExtResource("1_wtknf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(573.826, 316.091)
-scale = Vector2(1.15035, 0.964345)
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(576, 319)
+scale = Vector2(0.422279, 0.419417)
+texture = ExtResource("2_vifwl")
 
 [node name="Label" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 offset_left = 68.0
 offset_top = 459.0
 offset_right = 1075.0
@@ -139,6 +150,9 @@ offset_bottom = 589.0
 theme = SubResource("Theme_w5rwj")
 
 [node name="S" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 618.0
 offset_top = 12.0
@@ -151,6 +165,9 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Cl" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 743.0
 offset_top = 12.0
@@ -161,6 +178,9 @@ flat = true
 expand_icon = true
 
 [node name="Na" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 505.0
 offset_top = 12.0
@@ -171,6 +191,9 @@ flat = true
 expand_icon = true
 
 [node name="K" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 874.0
 offset_top = 12.0
@@ -181,6 +204,9 @@ flat = true
 expand_icon = true
 
 [node name="N" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 266.0
 offset_top = 12.0
@@ -191,6 +217,9 @@ flat = true
 expand_icon = true
 
 [node name="C" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 138.0
 offset_top = 12.0
@@ -201,6 +230,9 @@ flat = true
 expand_icon = true
 
 [node name="H" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 18.0
 offset_top = 12.0
@@ -211,6 +243,9 @@ flat = true
 expand_icon = true
 
 [node name="O" type="Button" parent="Label"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = 386.0
 offset_top = 12.0
@@ -221,15 +256,21 @@ flat = true
 expand_icon = true
 
 [node name="Control" type="Control" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
-offset_left = 182.0
-offset_top = 23.0
-offset_right = 222.0
-offset_bottom = 63.0
+offset_left = 184.398
+offset_top = 58.8438
+offset_right = 224.398
+offset_bottom = 98.8438
 script = ExtResource("3_g2la1")
 
 [node name="Label2" type="Label" parent="Control"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 layout_mode = 0
 offset_left = -136.0
 offset_top = -15.0
@@ -245,27 +286,47 @@ wait_time = 90.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 position = Vector2(574, 318)
 
 [node name="Aiuto" type="Node2D" parent="."]
+position = Vector2(-4, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Aiuto"]
-position = Vector2(222, 43)
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(226.199, 69.9219)
 scale = Vector2(1.08203, 0.767228)
 texture = ExtResource("12_1y6dq")
 
 [node name="Area2D" type="Area2D" parent="Aiuto"]
-position = Vector2(196, 27)
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(198.398, 62.8438)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Aiuto/Area2D"]
-position = Vector2(25.875, 15.875)
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(27.8008, 7.07811)
 shape = SubResource("RectangleShape2D_olieg")
 
 [node name="VideoTutorial" type="Node2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(270.199, 128.922)
 
 [node name="VideoSprite" type="Sprite2D" parent="VideoTutorial"]
 visible = false
-position = Vector2(404, 131)
+light_mask = 4
+visibility_layer = 4
+z_index = 4
+position = Vector2(24, 104)
 scale = Vector2(0.783898, 0.635973)
 texture = ExtResource("12_dmce7")
 
@@ -283,5 +344,5 @@ autoplay = "show_video"
 [connection signal="button_down" from="Label/C" to="GameManager" method="_on_c_button_down"]
 [connection signal="button_down" from="Label/H" to="GameManager" method="_on_h_button_down"]
 [connection signal="button_down" from="Label/O" to="GameManager" method="_on_o_button_down"]
-[connection signal="mouse_shape_entered" from="Aiuto/Area2D" to="GameManager" method="_on_area_2d_mouse_shape_entered"]
-[connection signal="mouse_shape_exited" from="Aiuto/Area2D" to="GameManager" method="_on_area_2d_mouse_shape_exited"]
+[connection signal="mouse_entered" from="Aiuto/Area2D" to="GameManager" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Aiuto/Area2D" to="GameManager" method="_on_area_2d_mouse_exited"]

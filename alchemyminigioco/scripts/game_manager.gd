@@ -151,23 +151,14 @@ func _on_o_button_down() -> void:
 	pass # Replace with function body.
 
 
-func _on_label_2_mouse_entered() -> void:
-	
-	pass # Replace with function body.
 
-
-
-
-
-
-
-func _on_area_2d_mouse_shape_entered(shape_idx: int) -> void:
+func _on_area_2d_mouse_entered() -> void:
 	var video_sprite: Sprite2D = $"../VideoTutorial/VideoSprite"
 	video_sprite.visible = true;
 	pass # Replace with function body.
 
 
-func _on_area_2d_mouse_shape_exited(shape_idx: int) -> void:
+func _on_area_2d_mouse_exited() -> void:
 	var video_sprite: Sprite2D = $"../VideoTutorial/VideoSprite"
 	video_sprite.visible = false;
 	pass # Replace with function body.
