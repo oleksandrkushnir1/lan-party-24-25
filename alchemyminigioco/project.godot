@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AlchemyMiniGioco"
-run/main_scene="res://scene/minigiochi.tscn"
+run/main_scene="res://LivelloChimica/scene/minigiochi.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/icon2.svg"
 
