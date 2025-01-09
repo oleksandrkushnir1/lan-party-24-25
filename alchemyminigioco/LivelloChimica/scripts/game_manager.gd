@@ -1,7 +1,8 @@
 extends Node
 @onready var video_stream_player: VideoStreamPlayer = $"../VideoTutorial/VideoStreamPlayer"
 @onready var video_tutorial: Node2D = $"../VideoTutorial"
-
+var elementi_completati = 0
+var punti = 0
 var element_scene = preload("res://LivelloChimica/scene/elemento.tscn")
 var task_scene = preload("res://LivelloChimica/scene/task.tscn") 
 # Punti di spawn
@@ -102,6 +103,10 @@ func spawn_element(position: Vector2, name):
 		bho = taskTracker[i]
 		if bho.base == name:
 			taskTracker[i].completato = true
+			elementi_completati += 1
+		
+	if elementi_completati == 4:
+		print("Fine")
 	
 
 func spawn_task(posizione: Vector2, name) -> Node2D:
@@ -162,6 +167,5 @@ func _on_area_2d_mouse_entered() -> void:
 
 
 func _on_area_2d_mouse_exited() -> void:
-	
 	video_tutorial.hide()
 	pass # Replace with function body.

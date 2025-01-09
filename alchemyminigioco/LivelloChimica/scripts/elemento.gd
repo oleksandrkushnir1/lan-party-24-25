@@ -18,10 +18,15 @@ func _process(delta: float) -> void:
 func _on_button_button_down() -> void: 
 	dragging = true 
 	of = get_global_mouse_position() - global_position 
+	disabilita_aiuto()
+	
 func _on_button_button_up() -> void: 
 	dragging = false 
-
+	disabilita_aiuto()
 
 func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if game_manager.has_node(area.get_path()) and dragging == true:
 		game_manager.handle_collision(self,area)
+
+func disabilita_aiuto():
+	get_parent().get_parent().get_node("Aiuto/Area2D/CollisionShape2D").disabled = !get_parent().get_parent().get_node("Aiuto/Area2D/CollisionShape2D").disabled

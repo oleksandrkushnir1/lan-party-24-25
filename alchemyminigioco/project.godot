@@ -17,6 +17,7 @@ config/icon="res://assets/icon2.svg"
 
 [display]
 
+window/size/mode=1
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
@@ -24,6 +25,15 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="AlchemyMiniGioco"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
+[layer_names]
+
+2d_physics/layer_1="elementi"
+2d_physics/layer_2="aiuto"
 
 [rendering]
 

@@ -1,6 +1,7 @@
 [gd_scene load_steps=31 format=4 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://LivelloChimica/scripts/game_manager.gd" id="1_ftjyd"]
+[ext_resource type="Texture2D" uid="uid://b8awh2ohmbvb3" path="res://LivelloChimica/assets/sfondi/wp14559422-red-castle-wallpapers.jpg" id="2_hiwi8"]
 [ext_resource type="Script" path="res://LivelloChimica/scripts/control.gd" id="11_6xoq1"]
 [ext_resource type="Script" path="res://LivelloChimica/scripts/tutorial.gd" id="15_amods"]
 
@@ -15,9 +16,6 @@ normal = Vector2(0.0247858, 0.999693)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vuo8t"]
 normal = Vector2(-0.999916, 0.01293)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vhm8s"]
-load_path = "res://.godot/imported/wp13022004-fantasy-city-4k-wallpapers.jpg-7421100fc7a60d4191439c2c3898f0d2.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1504m"]
 bg_color = Color(0.355436, 0.025635, 0.0241121, 0.541176)
@@ -395,9 +393,9 @@ script = ExtResource("1_ftjyd")
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(576, 319)
-scale = Vector2(0.422279, 0.419417)
-texture = SubResource("CompressedTexture2D_vhm8s")
+position = Vector2(576.241, 323.51)
+scale = Vector2(0.450593, 0.454847)
+texture = ExtResource("2_hiwi8")
 
 [node name="Label" type="Label" parent="."]
 light_mask = 2
@@ -563,22 +561,24 @@ position = Vector2(574, 318)
 position = Vector2(-4, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Aiuto"]
-light_mask = 2
-visibility_layer = 2
+light_mask = 8
+visibility_layer = 8
 z_index = 1
 position = Vector2(226.199, 69.9219)
 scale = Vector2(1.08203, 0.767228)
 texture = SubResource("CompressedTexture2D_4vp8a")
 
 [node name="Area2D" type="Area2D" parent="Aiuto"]
-light_mask = 2
-visibility_layer = 2
+light_mask = 0
+visibility_layer = 0
 z_index = 1
 position = Vector2(198.398, 62.8438)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Aiuto/Area2D"]
-light_mask = 2
-visibility_layer = 2
+light_mask = 8
+visibility_layer = 8
 z_index = 1
 position = Vector2(27.8008, 7.07811)
 shape = SubResource("RectangleShape2D_olieg")
@@ -608,10 +608,10 @@ script = ExtResource("15_amods")
 
 [node name="Label" type="Label" parent="Tutorial/Elementi"]
 z_index = 1842
-offset_left = 132.0
-offset_top = 331.0
-offset_right = 620.0
-offset_bottom = 380.0
+offset_left = 85.0
+offset_top = 327.0
+offset_right = 573.0
+offset_bottom = 376.0
 theme = SubResource("Theme_lsm22")
 text = "Clicca qui per spawnare elementi da unire!
 Prova diverse combinazioni per creare nuove risorse!"
@@ -620,7 +620,7 @@ vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Tutorial/Elementi"]
 z_index = 1915
-position = Vector2(388, 419)
+position = Vector2(356, 422)
 rotation = -2.02348
 scale = Vector2(0.143721, 0.152551)
 texture = SubResource("CompressedTexture2D_h7plr")
