@@ -8,9 +8,9 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("ClickS") and vf == true:
-		anims.play("legno")
+	if Input.is_action_just_pressed("ClickD") and vf == true:
+		anims.play("ghiaia")
 		vf = false
-	elif Input.is_action_just_pressed("ClickS") and vf == false:
-		anims.play("metallo")
+	elif Input.is_action_just_pressed("ClickD") and vf == false:
+		anims.play("ghiaccio")
 		vf = true

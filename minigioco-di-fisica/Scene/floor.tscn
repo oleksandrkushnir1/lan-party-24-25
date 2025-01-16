@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://fe8qoj8q25vu"]
+
+[ext_resource type="Texture2D" uid="uid://dmrxe648xid70" path="res://Assets/PavimentoInGhiaccio(temp).png" id="1_1xrh2"]
+[ext_resource type="Script" path="res://Scripts/pavimento.gd" id="1_8uphk"]
+[ext_resource type="Texture2D" uid="uid://cfobo0nubwdt4" path="res://Assets/PavimentoInGhiaia(temp).png" id="2_kpif0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ds0ra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1xrh2")
+}],
+"loop": false,
+"name": &"ghiaccio",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kpif0")
+}],
+"loop": false,
+"name": &"ghiaia",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pk33v"]
+size = Vector2(1024, 47)
+
+[node name="floor" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_8uphk")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(512, 24)
+sprite_frames = SubResource("SpriteFrames_ds0ra")
+animation = &"ghiaia"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(512, 23.5)
+shape = SubResource("RectangleShape2D_pk33v")

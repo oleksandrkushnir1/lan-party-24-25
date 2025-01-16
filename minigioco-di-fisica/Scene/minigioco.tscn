@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://xtd716pohaus"]
+[gd_scene load_steps=6 format=3 uid="uid://xtd716pohaus"]
 
 [ext_resource type="PackedScene" uid="uid://cnbpy7vs1c7gu" path="res://Scene/player.tscn" id="1_h4ygs"]
 [ext_resource type="PackedScene" uid="uid://bb1o2pjfsippq" path="res://Scene/box.tscn" id="2_0dd5a"]
+[ext_resource type="PackedScene" uid="uid://fe8qoj8q25vu" path="res://Scene/floor.tscn" id="3_bcunk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qihh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26rne"]
+size = Vector2(38, 603)
 
 [node name="Minigioco" type="Node2D"]
 
@@ -18,7 +22,7 @@ grow_vertical = 2
 position = Vector2(56, 53)
 
 [node name="Pavimento" type="StaticBody2D" parent="."]
-position = Vector2(0, 553)
+position = Vector2(0, 601)
 collision_layer = 3
 collision_mask = 3
 metadata/_edit_group_ = true
@@ -26,5 +30,16 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pavimento"]
 shape = SubResource("WorldBoundaryShape2D_qihh5")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pavimento"]
+position = Vector2(-19, -300.5)
+shape = SubResource("RectangleShape2D_26rne")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pavimento"]
+position = Vector2(1044, -300)
+shape = SubResource("RectangleShape2D_26rne")
+
 [node name="Box" parent="." instance=ExtResource("2_0dd5a")]
 position = Vector2(135, 0)
+
+[node name="floor" parent="." instance=ExtResource("3_bcunk")]
+position = Vector2(0, 552)
