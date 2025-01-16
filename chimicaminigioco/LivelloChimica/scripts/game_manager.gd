@@ -96,7 +96,7 @@ func spawn_element(position: Vector2, name):
 	if name in assets:
 		instance.sprite = assets[name]
 	else :
-		instance.sprite = load("res://LivelloChimica/assets/icon.png")
+		instance.sprite = load("res://LivelloChimica/assets/icon2.svg")
 	add_child(instance)
 	for i in range(taskTracker.size()):
 		print(taskTracker[i])

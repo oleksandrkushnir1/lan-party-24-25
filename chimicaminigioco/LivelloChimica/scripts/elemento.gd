@@ -3,7 +3,7 @@ var dragging = false
 var of = Vector2(0,0) 
 @export var element_name = "H" 
 var game_manager: Node
-var sprite = load("res://assets/icon2.svg")
+var sprite = load("res://LivelloChimica/assets/icon2.svg")
 
 func _ready() -> void: 
 	game_manager = get_node("/root/Minigiochi/GameManager")

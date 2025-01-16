@@ -2,8 +2,16 @@
 
 [ext_resource type="Script" path="res://LivelloChimica/scripts/game_manager.gd" id="1_ftjyd"]
 [ext_resource type="Texture2D" uid="uid://b8awh2ohmbvb3" path="res://LivelloChimica/assets/sfondi/wp14559422-red-castle-wallpapers.jpg" id="2_hiwi8"]
+[ext_resource type="Texture2D" uid="uid://y2sbxkom5ow7" path="res://LivelloChimica/assets/Elementi/Zolfo.png" id="3_rbahs"]
 [ext_resource type="Texture2D" uid="uid://cow2tc66yksca" path="res://LivelloChimica/assets/icons8-question-mark-78.png" id="4_rbns6"]
+[ext_resource type="Texture2D" uid="uid://ek7mt2qltw1t" path="res://LivelloChimica/assets/Elementi/Cloro.png" id="4_t7qek"]
+[ext_resource type="Texture2D" uid="uid://5r8fuqoroksc" path="res://LivelloChimica/assets/Elementi/Sodio.png" id="5_0fg7e"]
 [ext_resource type="Texture2D" uid="uid://civ201ahfpdgy" path="res://LivelloChimica/assets/pngegg.png" id="5_3lro7"]
+[ext_resource type="Texture2D" uid="uid://lqvlr5tmff4" path="res://LivelloChimica/assets/Elementi/Potassio.png" id="6_k1ss5"]
+[ext_resource type="Texture2D" uid="uid://dnpaaxymickv6" path="res://LivelloChimica/assets/Elementi/Azoto.png" id="7_7511f"]
+[ext_resource type="Texture2D" uid="uid://dwhqauwo4emx2" path="res://LivelloChimica/assets/Elementi/Carbonio.png" id="8_xfvd7"]
+[ext_resource type="Texture2D" uid="uid://csrsckg6logj3" path="res://LivelloChimica/assets/Elementi/Idrogeno.png" id="9_sgyb6"]
+[ext_resource type="Texture2D" uid="uid://dv3g7kpeacgi7" path="res://LivelloChimica/assets/Elementi/Ossigeno.png" id="10_tl80k"]
 [ext_resource type="Script" path="res://LivelloChimica/scripts/control.gd" id="11_6xoq1"]
 [ext_resource type="Script" path="res://LivelloChimica/scripts/tutorial.gd" id="15_amods"]
 
@@ -26,30 +34,6 @@ bg_color = Color(0.355436, 0.025635, 0.0241121, 0.541176)
 Label/styles/normal = SubResource("StyleBoxFlat_1504m")
 
 [sub_resource type="SystemFont" id="SystemFont_rwb73"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5h1m2"]
-load_path = "res://.godot/imported/Zolfo.png-8d7851d07bf227a394c958f383ce216f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3p8il"]
-load_path = "res://.godot/imported/Cloro.png-007104754803a555f04be6ce3272d037.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6j4b8"]
-load_path = "res://.godot/imported/Sodio.png-b6185d7a7f01d75be8c5a1a961e7b5f5.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_krjli"]
-load_path = "res://.godot/imported/Potassio.png-0a65ad834dcf539229e121d786195974.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nc36i"]
-load_path = "res://.godot/imported/Azoto.png-4c0b922f4481c09cc7d9d16f6bdbb55b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v23ox"]
-load_path = "res://.godot/imported/Carbonio.png-f1e9bf7ddf72281c27ac1daf0948b6af.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_khf0t"]
-load_path = "res://.godot/imported/Idrogeno.png-226f358203da2aede73ea4ad49b2e1f7.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_450np"]
-load_path = "res://.godot/imported/Ossigeno.png-cef4a029ea6ed3a58c8df2399c197423.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04whp"]
 content_margin_left = 4.0
@@ -415,7 +399,7 @@ offset_right = 722.0
 offset_bottom = 116.0
 focus_mode = 0
 theme_override_fonts/font = SubResource("SystemFont_rwb73")
-icon = SubResource("CompressedTexture2D_5h1m2")
+icon = ExtResource("3_rbahs")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -431,7 +415,7 @@ offset_top = 12.0
 offset_right = 850.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_3p8il")
+icon = ExtResource("4_t7qek")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -446,7 +430,7 @@ offset_top = 12.0
 offset_right = 610.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_6j4b8")
+icon = ExtResource("5_0fg7e")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -461,7 +445,7 @@ offset_top = 12.0
 offset_right = 978.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_krjli")
+icon = ExtResource("6_k1ss5")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -476,7 +460,7 @@ offset_top = 12.0
 offset_right = 370.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_nc36i")
+icon = ExtResource("7_7511f")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -491,7 +475,7 @@ offset_top = 12.0
 offset_right = 242.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_v23ox")
+icon = ExtResource("8_xfvd7")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -506,7 +490,7 @@ offset_top = 12.0
 offset_right = 122.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_khf0t")
+icon = ExtResource("9_sgyb6")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -521,7 +505,7 @@ offset_top = 12.0
 offset_right = 492.0
 offset_bottom = 116.0
 focus_mode = 0
-icon = SubResource("CompressedTexture2D_450np")
+icon = ExtResource("10_tl80k")
 flat = true
 expand_icon = true
 metadata/_edit_use_anchors_ = true
