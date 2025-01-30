@@ -6,11 +6,14 @@ var anims
 func _ready() -> void:
 	anims = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	
-	if Input.is_action_just_pressed("ClickD") and vf == true:
+"""
+Questo blocco permette al personaggio di cambiare il materiale del pavimento.
+Quando premo il pulsante passa da ghiaia a giaccio e viceversa.
+"""
+func _on_button_button_down() -> void:
+	if vf == true:
 		anims.play("ghiaia")
 		vf = false
-	elif Input.is_action_just_pressed("ClickD") and vf == false:
+	else:
 		anims.play("ghiaccio")
 		vf = true

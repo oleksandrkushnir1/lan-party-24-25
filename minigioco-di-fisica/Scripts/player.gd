@@ -5,11 +5,9 @@ var speed = 1
 var _speed = 1
 var fiction = 1
 var vf = true
+var _vf = true
 
 func _physics_process(delta: float) -> void:
-	_massa()
-	_coefAttritto()
-	
 	"""
 	Questo blocco definisce il movimento.
 	Il personaggio si muove solo se "A" O "D" tasto è permuto.
@@ -27,27 +25,25 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 """
-Questo blocco definisce il la massa.
-Il personaggio varia la sua velocita simulando una cassa più pesante.
-L'animazione cassa si alterna al click sinistro.
+Questo blocco permette al personaggio di cambiare velocità.
+Quando premo il pulsante passa da velocità *2.5 a *8 e viceversa.
 """
-func _massa() -> void:
-	if Input.is_action_just_pressed("ClickS") and vf == true:
+func _on_button_button_down() -> void:
+	if vf == true:
 		vf = false
-		speed = 10
-	elif Input.is_action_just_pressed("ClickS") and vf == false:
+		_speed = 2.5
+	else:
 		vf = true
-		speed = 1
+		_speed = 8
 
 """
-Questo blocco definisce il la massa.
-Il personaggio varia la sua velocita simulando una cassa più pesante.
-L'animazione cassa si alterna al click destro.
+Questo blocco permette al personaggio di cambiare velocità.
+Quando premo il pulsante passa da velocità *10 a *1 e viceversa.
 """
-func _coefAttritto() -> void:
-	if Input.is_action_just_pressed("ClickD") and vf == true:
-		vf = false
-		_speed = 8
-	elif Input.is_action_just_pressed("ClickD") and vf == false:
-		vf = true
-		_speed = 2.5
+func _on_button_2_button_down() -> void:
+	if _vf == true:
+		_vf = false
+		speed = 10
+	else:
+		_vf = true
+		speed = 1
