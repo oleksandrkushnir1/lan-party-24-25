@@ -1,0 +1,56 @@
+{
+  "spada unicorno": {
+	"nome": "spada unicorno",
+	"danno": 450,
+	"velocità_attacco": 1.2,
+	"raggio_attacco": 1.2,
+	"tipo_di_danno": "corpo a corpo",
+	"parata": 20,
+	"costo": 1000
+  },
+  "durindarda": {
+	"nome": "durindarda",
+	"danno": 1000,
+	"velocità_attacco": 1.5,
+	"raggio_attacco": 1.5,
+	"tipo_di_danno": "corpo a corpo",
+	"parata": 40,
+	"costo": 2000
+  },
+  "nerd emoji": {
+	"nome": "nerd emoji",
+	"danno": 10,
+	"velocità_attacco": 1,
+	"raggio_attacco": 1,
+	"tipo_di_danno": "stordimento",
+	"parata": 0,
+	"costo": 450
+  },
+  "": {
+	"nome": "",
+	"danno": "",
+	"velocità_attacco": "",
+	"raggio_attacco": "",
+	"tipo_di_danno": "",
+	"parata": "",
+	"costo": ""
+  },
+  "bibbia": {
+	"nome": "bibbia",
+	"danno": "",
+	"velocità_attacco": "",
+	"raggio_attacco": "",
+	"tipo_di_danno": "range",
+	"parata": "",
+	"costo": ""
+  },
+  "barret": {
+	"nome": "barret",
+	"danno": "",
+	"velocità_attacco": "",
+	"raggio_attacco": "",
+	"tipo_di_danno": "da lontano",
+	"parata": "",
+	"costo": ""
+  }
+}
