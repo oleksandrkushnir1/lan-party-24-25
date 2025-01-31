@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738358674
-istruzioni.txt::TextFile::-1::1738358383::0::1::::<><>::
-icon.svg::CompressedTexture2D::3385413705246932890::1732216432::1738357838::1::::<><>::
-inventario.gd::GDScript::-1::1738358367::0::1::::<>Node<>::
-inventario.tscn::PackedScene::7758364150080976682::1738358719::0::1::::<><>::res://arma.gd
-arma.gd::GDScript::-1::1738358719::0::1::::<>Node<>::
-weapons.json::JSON::-1::1738357759::0::1::::<><>::
+::res://::1738361528
+arma.gd::GDScript::-1::1738361374::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::3385413705246932890::1738361115::1738361541::1::::<><>::
+inventario.gd::GDScript::-1::1738361374::0::1::::<>Node<>::
+inventario.tscn::PackedScene::7758364150080976682::1738361498::0::1::::<><>::res://arma.gd
+istruzioni.md::TextFile::-1::1738361374::0::1::::<><>::
+weapons.json::JSON::-1::1738361528::0::1::::<><>::
