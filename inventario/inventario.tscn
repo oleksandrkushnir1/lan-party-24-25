@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dishehnj8k4wk"]
+
+[ext_resource type="Script" path="res://arma.gd" id="1_uj4yi"]
+
+[node name="inventario" type="Node"]
+script = ExtResource("1_uj4yi")
