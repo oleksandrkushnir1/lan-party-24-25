@@ -1,6 +1,8 @@
 extends Node
 @onready var video_stream_player: VideoStreamPlayer = $"../VideoTutorial/VideoStreamPlayer"
 @onready var video_tutorial: Node2D = $"../VideoTutorial"
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+
 var elementi_completati = 0
 var punti = 0
 var element_scene = preload("res://LivelloChimica/scene/elemento.tscn")
@@ -72,6 +74,7 @@ var instance = element_scene.instantiate()
 var instanceTasks = task_scene.instantiate()
 var position : Vector2
 func _ready():
+	audio_stream_player_2d.play()
 	video_stream_player.scale = Vector2(0.5,0.5)
 	video_tutorial.hide()
 	var b = RandomNumberGenerator.new().randi_range(0,5);
