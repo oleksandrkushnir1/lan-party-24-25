@@ -24,7 +24,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pk33v"]
-size = Vector2(1024, 47)
+size = Vector2(1150, 47)
 
 [node name="floor" type="RigidBody2D"]
 collision_layer = 3
@@ -33,10 +33,11 @@ script = ExtResource("1_8uphk")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(512, 24)
+position = Vector2(575.5, 24)
+scale = Vector2(1.12402, 1)
 sprite_frames = SubResource("SpriteFrames_ds0ra")
 animation = &"ghiaia"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(512, 23.5)
+position = Vector2(575, 23.5)
 shape = SubResource("RectangleShape2D_pk33v")
