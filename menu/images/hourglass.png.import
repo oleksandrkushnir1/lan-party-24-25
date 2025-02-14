@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ioq2m7q868u"
-path="res://.godot/imported/panel_brown_corners_a.svg-c16baa162ea3d7dab41a3019347457f3.ctex"
+uid="uid://d2ne3e67prdx8"
+path="res://.godot/imported/hourglass.png-d535672b9b19399486efd8a55fabec9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vector/panel_brown_corners_a.svg"
-dest_files=["res://.godot/imported/panel_brown_corners_a.svg-c16baa162ea3d7dab41a3019347457f3.ctex"]
+source_file="res://images/hourglass.png"
+dest_files=["res://.godot/imported/hourglass.png-d535672b9b19399486efd8a55fabec9d.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cvgbspybigvp1"]
 
-[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://MinecraftRegular-Bmg3.otf" id="1_r22n2"]
+[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://temi/MinecraftRegular-Bmg3.otf" id="1_r22n2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51ra3"]
 

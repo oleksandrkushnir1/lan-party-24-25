@@ -1,25 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckyiqs8iaextm"]
+[gd_scene load_steps=16 format=3 uid="uid://ckyiqs8iaextm"]
 
 [ext_resource type="Script" path="res://menu_vittoria.gd" id="1_2ra2b"]
-[ext_resource type="Texture2D" uid="uid://d1ioq2m7q868u" path="res://Vector/panel_brown_corners_a.svg" id="1_x3x34"]
+[ext_resource type="Texture2D" uid="uid://b6dyotyj20gln" path="res://Vector/panel_brown_damaged_dark.svg" id="2_a530w"]
 [ext_resource type="Texture2D" uid="uid://cpbu4rui7ogx3" path="res://Vector/banner_classic_curtain.svg" id="2_vhspx"]
+[ext_resource type="Texture2D" uid="uid://vriuv6nsppl4" path="res://Vector/panel_border_brown.svg" id="3_cemqf"]
 [ext_resource type="Texture2D" uid="uid://dx6flxap108a2" path="res://Vector/banner_hanging.svg" id="3_rij82"]
 [ext_resource type="Texture2D" uid="uid://ihe2y75xvnhi" path="res://Vector/panel_brown.svg" id="4_r7ut4"]
-[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://MinecraftRegular-Bmg3.otf" id="5_e5yme"]
-[ext_resource type="Theme" uid="uid://cvgbspybigvp1" path="res://fonttheme.tres" id="5_ei0tr"]
-[ext_resource type="Texture2D" uid="uid://d2ne3e67prdx8" path="res://hourglass.png" id="6_lo8d8"]
-[ext_resource type="Texture2D" uid="uid://ddbjmifkvun0q" path="res://coin.png" id="7_dsu20"]
-[ext_resource type="Texture2D" uid="uid://tl6pem8ff8ox" path="res://points.png" id="8_3f61d"]
+[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://temi/MinecraftRegular-Bmg3.otf" id="5_e5yme"]
+[ext_resource type="Theme" uid="uid://cvgbspybigvp1" path="res://temi/fonttheme.tres" id="5_ei0tr"]
+[ext_resource type="Texture2D" uid="uid://d2ne3e67prdx8" path="res://images/hourglass.png" id="6_lo8d8"]
+[ext_resource type="Texture2D" uid="uid://ddbjmifkvun0q" path="res://images/coin.png" id="7_dsu20"]
+[ext_resource type="Texture2D" uid="uid://tl6pem8ff8ox" path="res://images/points.png" id="8_3f61d"]
 [ext_resource type="Texture2D" uid="uid://cuss06u45ofnq" path="res://Vector/button_grey.svg" id="8_pj1lb"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xget"]
-load_path = "res://.godot/imported/panel_brown_damaged_dark.svg-63f61f07a6da6ac9486c5091b253271e.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_to2hn"]
-load_path = "res://.godot/imported/panel_brown_damaged_dark.svg-63f61f07a6da6ac9486c5091b253271e.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pw0j2"]
-load_path = "res://.godot/imported/panel_brown_damaged_dark.svg-63f61f07a6da6ac9486c5091b253271e.ctex"
 
 [sub_resource type="Animation" id="Animation_n7nll"]
 length = 0.001
@@ -59,6 +51,7 @@ _data = {
 }
 
 [node name="menuGenerale" type="Control"]
+process_mode = 3
 custom_minimum_size = Vector2(500, 400)
 layout_mode = 3
 anchors_preset = 8
@@ -90,13 +83,13 @@ offset_right = 276.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_x3x34")
+texture = ExtResource("2_a530w")
 patch_margin_left = 20
 patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="Control" type="Control" parent="."]
+[node name="Card" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -107,8 +100,9 @@ offset_right = 2.0
 offset_bottom = -116.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="TempoTab" type="NinePatchRect" parent="Control"]
+[node name="TempoTab" type="NinePatchRect" parent="Card"]
 custom_minimum_size = Vector2(150, 185.9)
 layout_mode = 1
 anchors_preset = 2
@@ -119,13 +113,14 @@ offset_right = 150.0
 grow_vertical = 0
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(0.045, 0)
-texture = SubResource("CompressedTexture2D_1xget")
+mouse_filter = 0
+texture = ExtResource("3_cemqf")
 patch_margin_left = 20
 patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TextureRect" type="TextureRect" parent="Control/TempoTab"]
+[node name="TextureRect" type="TextureRect" parent="Card/TempoTab"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -137,22 +132,24 @@ grow_horizontal = 2
 texture = ExtResource("3_rij82")
 expand_mode = 1
 
-[node name="titolotempo" type="Label" parent="Control/TempoTab/TextureRect"]
+[node name="titolotempo" type="Label" parent="Card/TempoTab/TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.1667
-offset_right = 20.0
-offset_bottom = 11.1667
+offset_left = -30.0
+offset_top = -7.83337
+offset_right = 30.0
+offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_e5yme")
+theme_override_font_sizes/font_size = 20
 text = "Tempo"
 
-[node name="DescriptionTempo" type="NinePatchRect" parent="Control/TempoTab"]
+[node name="DescriptionTempo" type="NinePatchRect" parent="Card/TempoTab"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -171,7 +168,7 @@ patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TitleDesTempo" type="Label" parent="Control/TempoTab/DescriptionTempo"]
+[node name="TitleDesTempo" type="Label" parent="Card/TempoTab/DescriptionTempo"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -192,7 +189,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="containerdati" type="HBoxContainer" parent="Control/TempoTab/DescriptionTempo"]
+[node name="containerdati" type="HBoxContainer" parent="Card/TempoTab/DescriptionTempo"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -207,18 +204,18 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 5
 
-[node name="TempoImpiegato" type="Label" parent="Control/TempoTab/DescriptionTempo/containerdati"]
+[node name="TempoImpiegato" type="Label" parent="Card/TempoTab/DescriptionTempo/containerdati"]
 layout_mode = 2
 theme = ExtResource("5_ei0tr")
 text = "1:20"
 
-[node name="TextureRect" type="TextureRect" parent="Control/TempoTab/DescriptionTempo/containerdati"]
+[node name="TextureRect" type="TextureRect" parent="Card/TempoTab/DescriptionTempo/containerdati"]
 custom_minimum_size = Vector2(26.295, 18.735)
 layout_mode = 2
 texture = ExtResource("6_lo8d8")
 expand_mode = 1
 
-[node name="CoinTab" type="NinePatchRect" parent="Control"]
+[node name="CoinTab" type="NinePatchRect" parent="Card"]
 custom_minimum_size = Vector2(150, 160)
 layout_mode = 1
 anchors_preset = 5
@@ -230,13 +227,14 @@ offset_bottom = 185.0
 grow_horizontal = 2
 scale = Vector2(1.1, 1.1)
 pivot_offset = Vector2(74.615, 96.58)
-texture = SubResource("CompressedTexture2D_to2hn")
+mouse_filter = 0
+texture = ExtResource("3_cemqf")
 patch_margin_left = 20
 patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TextureRect" type="TextureRect" parent="Control/CoinTab"]
+[node name="TextureRect" type="TextureRect" parent="Card/CoinTab"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -248,22 +246,24 @@ grow_horizontal = 2
 texture = ExtResource("3_rij82")
 expand_mode = 1
 
-[node name="titolotempo" type="Label" parent="Control/CoinTab/TextureRect"]
+[node name="titolotempo" type="Label" parent="Card/CoinTab/TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.1667
-offset_right = 20.0
-offset_bottom = 11.1667
+offset_left = -46.0
+offset_top = -8.43944
+offset_right = 46.0
+offset_bottom = 13.894
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_e5yme")
+theme_override_font_sizes/font_size = 20
 text = "BricoCoin"
 
-[node name="DescriptionBricoCoin" type="NinePatchRect" parent="Control/CoinTab"]
+[node name="DescriptionBricoCoin" type="NinePatchRect" parent="Card/CoinTab"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -282,7 +282,7 @@ patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TitleDesBrico" type="Label" parent="Control/CoinTab/DescriptionBricoCoin"]
+[node name="TitleDesBrico" type="Label" parent="Card/CoinTab/DescriptionBricoCoin"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -300,7 +300,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="containerdati" type="HBoxContainer" parent="Control/CoinTab/DescriptionBricoCoin"]
+[node name="containerdati" type="HBoxContainer" parent="Card/CoinTab/DescriptionBricoCoin"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -315,18 +315,18 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 5
 
-[node name="Bricoguadagnati" type="Label" parent="Control/CoinTab/DescriptionBricoCoin/containerdati"]
+[node name="Bricoguadagnati" type="Label" parent="Card/CoinTab/DescriptionBricoCoin/containerdati"]
 layout_mode = 2
 theme = ExtResource("5_ei0tr")
 text = "334"
 
-[node name="TextureRect" type="TextureRect" parent="Control/CoinTab/DescriptionBricoCoin/containerdati"]
+[node name="TextureRect" type="TextureRect" parent="Card/CoinTab/DescriptionBricoCoin/containerdati"]
 custom_minimum_size = Vector2(26.295, 18.735)
 layout_mode = 2
 texture = ExtResource("7_dsu20")
 expand_mode = 1
 
-[node name="PointTab" type="NinePatchRect" parent="Control"]
+[node name="PointTab" type="NinePatchRect" parent="Card"]
 custom_minimum_size = Vector2(150, 185.9)
 layout_mode = 1
 anchors_preset = 3
@@ -342,13 +342,14 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(0.045, 0)
-texture = SubResource("CompressedTexture2D_pw0j2")
+mouse_filter = 0
+texture = ExtResource("3_cemqf")
 patch_margin_left = 20
 patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TextureRect" type="TextureRect" parent="Control/PointTab"]
+[node name="TextureRect" type="TextureRect" parent="Card/PointTab"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -360,22 +361,24 @@ grow_horizontal = 2
 texture = ExtResource("3_rij82")
 expand_mode = 1
 
-[node name="Punteggio" type="Label" parent="Control/PointTab/TextureRect"]
+[node name="Punteggio" type="Label" parent="Card/PointTab/TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.1667
-offset_right = 20.0
-offset_bottom = 11.1667
+offset_left = -48.0
+offset_top = -7.83337
+offset_right = 48.0
+offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_e5yme")
+theme_override_font_sizes/font_size = 20
 text = "Punteggio"
 
-[node name="Descriptionpunteggio" type="NinePatchRect" parent="Control/PointTab"]
+[node name="Descriptionpunteggio" type="NinePatchRect" parent="Card/PointTab"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -394,7 +397,7 @@ patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="TitleDesPunteggio" type="Label" parent="Control/PointTab/Descriptionpunteggio"]
+[node name="TitleDesPunteggio" type="Label" parent="Card/PointTab/Descriptionpunteggio"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -415,7 +418,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="containerdati" type="HBoxContainer" parent="Control/PointTab/Descriptionpunteggio"]
+[node name="containerdati" type="HBoxContainer" parent="Card/PointTab/Descriptionpunteggio"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -430,12 +433,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 5
 
-[node name="punteggioottenuto" type="Label" parent="Control/PointTab/Descriptionpunteggio/containerdati"]
+[node name="punteggioottenuto" type="Label" parent="Card/PointTab/Descriptionpunteggio/containerdati"]
 layout_mode = 2
 theme = ExtResource("5_ei0tr")
 text = "2345"
 
-[node name="TextureRect" type="TextureRect" parent="Control/PointTab/Descriptionpunteggio/containerdati"]
+[node name="TextureRect" type="TextureRect" parent="Card/PointTab/Descriptionpunteggio/containerdati"]
 custom_minimum_size = Vector2(26.295, 18.735)
 layout_mode = 2
 texture = ExtResource("8_3f61d")
@@ -506,3 +509,5 @@ grow_vertical = 2
 theme = ExtResource("5_ei0tr")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "CONTINUA"
+
+[connection signal="pressed" from="bottonedes" to="." method="_on_bottonedes_pressed"]

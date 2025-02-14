@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://kphugf2my440"
-path="res://.godot/imported/MinecraftRegular-Bmg3.otf-d39662d18a293e6b21a672633ec7ddd4.fontdata"
+path="res://.godot/imported/MinecraftRegular-Bmg3.otf-0994cfc3fcbbe1fa911ed3a2c03b6386.fontdata"
 
 [deps]
 
-source_file="res://MinecraftRegular-Bmg3.otf"
-dest_files=["res://.godot/imported/MinecraftRegular-Bmg3.otf-d39662d18a293e6b21a672633ec7ddd4.fontdata"]
+source_file="res://temi/MinecraftRegular-Bmg3.otf"
+dest_files=["res://.godot/imported/MinecraftRegular-Bmg3.otf-0994cfc3fcbbe1fa911ed3a2c03b6386.fontdata"]
 
 [params]
 

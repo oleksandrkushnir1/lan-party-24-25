@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ijegd1xli0j"
-path="res://.godot/imported/panel_brown_damaged.svg-4fbafe5ba80b496016321d15c56f3bcf.ctex"
+uid="uid://tl6pem8ff8ox"
+path="res://.godot/imported/points.png-ecd5d03ec4bae614398841c94d96a414.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vector/panel_brown_damaged.svg"
-dest_files=["res://.godot/imported/panel_brown_damaged.svg-4fbafe5ba80b496016321d15c56f3bcf.ctex"]
+source_file="res://images/points.png"
+dest_files=["res://.godot/imported/points.png-ecd5d03ec4bae614398841c94d96a414.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

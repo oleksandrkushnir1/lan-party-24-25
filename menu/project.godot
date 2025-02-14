@@ -13,7 +13,11 @@ config_version=5
 config/name="schermate"
 run/main_scene="res://menu_vittoria.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [gui]
 
