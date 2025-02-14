@@ -1,17 +1,17 @@
 [gd_scene load_steps=16 format=3 uid="uid://ckyiqs8iaextm"]
 
-[ext_resource type="Script" path="res://menu_vittoria.gd" id="1_2ra2b"]
-[ext_resource type="Texture2D" uid="uid://b6dyotyj20gln" path="res://Vector/panel_brown_damaged_dark.svg" id="2_a530w"]
-[ext_resource type="Texture2D" uid="uid://cpbu4rui7ogx3" path="res://Vector/banner_classic_curtain.svg" id="2_vhspx"]
-[ext_resource type="Texture2D" uid="uid://vriuv6nsppl4" path="res://Vector/panel_border_brown.svg" id="3_cemqf"]
-[ext_resource type="Texture2D" uid="uid://dx6flxap108a2" path="res://Vector/banner_hanging.svg" id="3_rij82"]
-[ext_resource type="Texture2D" uid="uid://ihe2y75xvnhi" path="res://Vector/panel_brown.svg" id="4_r7ut4"]
-[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://temi/MinecraftRegular-Bmg3.otf" id="5_e5yme"]
-[ext_resource type="Theme" uid="uid://cvgbspybigvp1" path="res://temi/fonttheme.tres" id="5_ei0tr"]
-[ext_resource type="Texture2D" uid="uid://d2ne3e67prdx8" path="res://images/hourglass.png" id="6_lo8d8"]
-[ext_resource type="Texture2D" uid="uid://ddbjmifkvun0q" path="res://images/coin.png" id="7_dsu20"]
-[ext_resource type="Texture2D" uid="uid://tl6pem8ff8ox" path="res://images/points.png" id="8_3f61d"]
-[ext_resource type="Texture2D" uid="uid://cuss06u45ofnq" path="res://Vector/button_grey.svg" id="8_pj1lb"]
+[ext_resource type="Script" path="res://menu/menu_vittoria.gd" id="1_2ra2b"]
+[ext_resource type="Texture2D" uid="uid://b6dyotyj20gln" path="res://menu/Vector/panel_brown_damaged_dark.svg" id="2_a530w"]
+[ext_resource type="Texture2D" uid="uid://cpbu4rui7ogx3" path="res://menu/Vector/banner_classic_curtain.svg" id="2_vhspx"]
+[ext_resource type="Texture2D" uid="uid://vriuv6nsppl4" path="res://menu/Vector/panel_border_brown.svg" id="3_cemqf"]
+[ext_resource type="Texture2D" uid="uid://dx6flxap108a2" path="res://menu/Vector/banner_hanging.svg" id="3_rij82"]
+[ext_resource type="Texture2D" uid="uid://ihe2y75xvnhi" path="res://menu/Vector/panel_brown.svg" id="4_r7ut4"]
+[ext_resource type="FontFile" uid="uid://kphugf2my440" path="res://menu/temi/MinecraftRegular-Bmg3.otf" id="5_e5yme"]
+[ext_resource type="Theme" uid="uid://cvgbspybigvp1" path="res://menu/temi/fonttheme.tres" id="5_ei0tr"]
+[ext_resource type="Texture2D" uid="uid://d2ne3e67prdx8" path="res://menu/images/hourglass.png" id="6_lo8d8"]
+[ext_resource type="Texture2D" uid="uid://ddbjmifkvun0q" path="res://menu/images/coin.png" id="7_dsu20"]
+[ext_resource type="Texture2D" uid="uid://tl6pem8ff8ox" path="res://menu/images/points.png" id="8_3f61d"]
+[ext_resource type="Texture2D" uid="uid://cuss06u45ofnq" path="res://menu/Vector/button_grey.svg" id="8_pj1lb"]
 
 [sub_resource type="Animation" id="Animation_n7nll"]
 length = 0.001
@@ -52,6 +52,7 @@ _data = {
 
 [node name="menuGenerale" type="Control"]
 process_mode = 3
+z_index = 100
 custom_minimum_size = Vector2(500, 400)
 layout_mode = 3
 anchors_preset = 8
