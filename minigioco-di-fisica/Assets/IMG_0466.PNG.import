@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfobo0nubwdt4"
-path="res://.godot/imported/PavimentoInGhiaia(temp).png-b9dd7a23ce402107e37d84e09d651d10.ctex"
+uid="uid://bndt75neexalp"
+path="res://.godot/imported/IMG_0466.PNG-8d0ad84c452d043f548df40e8af18afd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PavimentoInGhiaia(temp).png"
-dest_files=["res://.godot/imported/PavimentoInGhiaia(temp).png-b9dd7a23ce402107e37d84e09d651d10.ctex"]
+source_file="res://Assets/IMG_0466.PNG"
+dest_files=["res://.godot/imported/IMG_0466.PNG-8d0ad84c452d043f548df40e8af18afd.ctex"]
 
 [params]
 

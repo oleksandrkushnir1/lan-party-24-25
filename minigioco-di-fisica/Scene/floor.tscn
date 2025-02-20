@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://fe8qoj8q25vu"]
 
-[ext_resource type="Texture2D" uid="uid://dmrxe648xid70" path="res://Assets/PavimentoInGhiaccio(temp).png" id="1_1xrh2"]
 [ext_resource type="Script" path="res://Scripts/pavimento.gd" id="1_8uphk"]
-[ext_resource type="Texture2D" uid="uid://cfobo0nubwdt4" path="res://Assets/PavimentoInGhiaia(temp).png" id="2_kpif0"]
+[ext_resource type="Texture2D" uid="uid://bndt75neexalp" path="res://Assets/IMG_0466.PNG" id="2_dqest"]
+[ext_resource type="Texture2D" uid="uid://cmuov7hbwi4t4" path="res://Assets/IMG_0467.PNG" id="3_1x8yi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ds0ra"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_1xrh2")
+"texture": ExtResource("2_dqest")
 }],
 "loop": false,
 "name": &"ghiaccio",
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kpif0")
+"texture": ExtResource("3_1x8yi")
 }],
 "loop": false,
 "name": &"ghiaia",
@@ -33,8 +33,8 @@ script = ExtResource("1_8uphk")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(575.5, 24)
-scale = Vector2(1.12402, 1)
+position = Vector2(575.5, 23.5)
+scale = Vector2(71.9375, 3.0625)
 sprite_frames = SubResource("SpriteFrames_ds0ra")
 animation = &"ghiaia"
 

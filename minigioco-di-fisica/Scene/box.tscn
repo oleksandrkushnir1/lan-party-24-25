@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bb1o2pjfsippq"]
 
 [ext_resource type="Script" path="res://Scripts/cassa.gd" id="1_elvmb"]
-[ext_resource type="Texture2D" uid="uid://h3mxwkwksdmv" path="res://Assets/CassaDiLegno(temp).png" id="1_sol78"]
-[ext_resource type="Texture2D" uid="uid://c7ntx0hko3ej5" path="res://Assets/CassaDiMetallo(temp).png" id="2_6lft6"]
+[ext_resource type="Texture2D" uid="uid://c2jkde56v7h6k" path="res://Assets/IMG_0469.PNG" id="2_ota5m"]
+[ext_resource type="Texture2D" uid="uid://hxr74r7xlu6v" path="res://Assets/IMG_0468.PNG" id="3_xb7v0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nn65o"]
 
@@ -10,7 +10,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sol78")
+"texture": ExtResource("2_ota5m")
 }],
 "loop": false,
 "name": &"legno",
@@ -18,7 +18,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_6lft6")
+"texture": ExtResource("3_xb7v0")
 }],
 "loop": false,
 "name": &"metallo",
@@ -37,8 +37,8 @@ script = ExtResource("1_elvmb")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(63, 64)
-scale = Vector2(0.25, 0.256)
+position = Vector2(63, 63.5)
+scale = Vector2(7.875, 7.9375)
 sprite_frames = SubResource("SpriteFrames_nso3o")
 animation = &"legno"
 
