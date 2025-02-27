@@ -1,21 +1,17 @@
 extends CharacterBody2D
 
-const SPEED = 1000
-var speed = 1
-var _speed = 1
-var fiction = 1
+const SPEED = 10
+var m = 1
+var y = 1
 var vf = true
 var _vf = true
 
 func _physics_process(delta: float) -> void:
-	"""
-	Questo blocco definisce il movimento.
-	Il personaggio si muove solo se "A" O "D" tasto è permuto.
-	"""
-	if Input.is_action_pressed("Destra"):
-		velocity.x = (SPEED*speed*_speed*delta)
-	elif Input.is_action_pressed("Sinistra"):
-		velocity.x = -(SPEED*speed*_speed*delta)
+	if Input.is_action_just_pressed("Conferma"):
+		$"../Timer".start()
+
+	if !$"../Timer".is_stopped():
+		velocity.x = ((SPEED-((m*9.81)*y))*50)
 	else:
 		velocity.x = 0
 
@@ -24,26 +20,18 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-"""
-Questo blocco permette al personaggio di cambiare velocità.
-Quando premo il pulsante passa da velocità *2.5 a *8 e viceversa.
-"""
 func _on_button_button_down() -> void:
 	if vf == true:
 		vf = false
-		_speed = 2.5
+		m = 0.1
 	else:
 		vf = true
-		_speed = 8
+		m = 1
 
-"""
-Questo blocco permette al personaggio di cambiare velocità.
-Quando premo il pulsante passa da velocità *10 a *1 e viceversa.
-"""
 func _on_button_2_button_down() -> void:
 	if _vf == true:
 		_vf = false
-		speed = 10
+		y = 0.2
 	else:
 		_vf = true
-		speed = 1
+		y = 0.75

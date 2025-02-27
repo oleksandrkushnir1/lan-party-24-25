@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://xtd716pohaus"]
+[gd_scene load_steps=11 format=3 uid="uid://xtd716pohaus"]
 
 [ext_resource type="Texture2D" uid="uid://dsh6iqnhg8qee" path="res://Assets/tree.png" id="1_a5f7t"]
 [ext_resource type="PackedScene" uid="uid://cnbpy7vs1c7gu" path="res://Scene/player.tscn" id="1_h4ygs"]
 [ext_resource type="PackedScene" uid="uid://bb1o2pjfsippq" path="res://Scene/box.tscn" id="2_0dd5a"]
 [ext_resource type="PackedScene" uid="uid://fe8qoj8q25vu" path="res://Scene/floor.tscn" id="3_bcunk"]
 [ext_resource type="Texture2D" uid="uid://dq5pscd2hs153" path="res://Assets/IMG_0471.PNG" id="5_sqthe"]
+[ext_resource type="Texture2D" uid="uid://dpb3ub1736ee6" path="res://Assets/IMG_0496.png" id="6_0ykga"]
 [ext_resource type="Texture2D" uid="uid://dp3y0iferiai6" path="res://Assets/IMG_0470.PNG" id="7_a4e71"]
+[ext_resource type="Texture2D" uid="uid://spsxj0ql4xv2" path="res://Assets/IMG_0495.png" id="8_ga3x3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qihh5"]
 
@@ -21,7 +23,7 @@ offset_bottom = 776.0
 texture = ExtResource("1_a5f7t")
 
 [node name="Player" parent="." instance=ExtResource("1_h4ygs")]
-position = Vector2(56, 53)
+position = Vector2(68, 52)
 
 [node name="Pavimento" type="StaticBody2D" parent="."]
 position = Vector2(0, 601)
@@ -42,7 +44,7 @@ position = Vector2(1172, -277)
 shape = SubResource("RectangleShape2D_26rne")
 
 [node name="Box" parent="." instance=ExtResource("2_0dd5a")]
-position = Vector2(135, 0)
+position = Vector2(122, -1)
 
 [node name="floor" parent="." instance=ExtResource("3_bcunk")]
 position = Vector2(2, 601)
@@ -53,6 +55,7 @@ offset_top = 38.0
 offset_right = 1066.0
 offset_bottom = 94.0
 texture_normal = ExtResource("5_sqthe")
+texture_pressed = ExtResource("6_0ykga")
 stretch_mode = 0
 
 [node name="Button2" type="TextureButton" parent="."]
@@ -61,7 +64,11 @@ offset_top = 37.0
 offset_right = 984.0
 offset_bottom = 94.0
 texture_normal = ExtResource("7_a4e71")
+texture_pressed = ExtResource("8_ga3x3")
 stretch_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="button_down" from="Button" to="Player" method="_on_button_button_down"]
 [connection signal="button_down" from="Button" to="floor" method="_on_button_button_down"]
