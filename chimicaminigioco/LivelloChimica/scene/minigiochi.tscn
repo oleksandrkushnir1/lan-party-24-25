@@ -374,8 +374,8 @@ script = ExtResource("1_ftjyd")
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(576, 318)
-scale = Vector2(0.85166, 0.699029)
+position = Vector2(576, 316.5)
+scale = Vector2(0.851661, 0.702266)
 texture = ExtResource("2_5qjpc")
 
 [node name="Label" type="Label" parent="."]
@@ -599,7 +599,7 @@ script = ExtResource("15_amods")
 [node name="Elementi" type="Node2D" parent="Tutorial"]
 
 [node name="Label" type="Label" parent="Tutorial/Elementi"]
-z_index = 1842
+z_index = 98
 offset_left = 85.0
 offset_top = 327.0
 offset_right = 573.0
@@ -612,7 +612,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Tutorial/Elementi"]
-z_index = 1915
+z_index = 98
 position = Vector2(356, 422)
 rotation = -2.02348
 scale = Vector2(0.143721, 0.152551)

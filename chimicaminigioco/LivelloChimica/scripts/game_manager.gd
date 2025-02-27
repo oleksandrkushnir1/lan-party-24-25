@@ -90,7 +90,6 @@ func _ready():
 	var task4 = tasks[b];
 	tasks.remove_at(b)
 	taskTracker = [spawn_task(Vector2(0, 70), task1),spawn_task(Vector2(0, 140), task2),spawn_task(Vector2(0, 210), task3),spawn_task(Vector2(0, 280), task4) ]
-
 func spawn_element(position: Vector2, name):
 	instance = element_scene.instantiate()
 	instance.global_position = position
@@ -100,7 +99,8 @@ func spawn_element(position: Vector2, name):
 		instance.sprite = assets[name]
 	else :
 		instance.sprite = load("res://LivelloChimica/assets/icon2.svg")
-	add_child(instance)
+	call_deferred("add_child", instance)
+	#add_child(instance)
 	for i in range(taskTracker.size()):
 		print(taskTracker[i])
 		bho = taskTracker[i]
@@ -110,6 +110,9 @@ func spawn_element(position: Vector2, name):
 		
 	if elementi_completati == 4:
 		print("Fine")
+		print($"../Control/Timer".time_left)
+		add_child(menu.creaMenu(90-int($"../Control/Timer".time_left),punti,randi_range(0,1000)))
+
 	
 
 func spawn_task(posizione: Vector2, name) -> Node2D:
@@ -172,3 +175,7 @@ func _on_area_2d_mouse_entered() -> void:
 func _on_area_2d_mouse_exited() -> void:
 	video_tutorial.hide()
 	pass # Replace with function body.
+
+
+func prossimaScena():
+	get_tree().reload_current_scene()

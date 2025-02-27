@@ -9,7 +9,7 @@ size = Vector2(26, 28)
 [node name="Elemento" type="Area2D"]
 light_mask = 2
 visibility_layer = 2
-z_index = 2021
+z_index = 99
 position = Vector2(86, 95)
 script = ExtResource("1_uaopm")
 element_name = "Elemento"
