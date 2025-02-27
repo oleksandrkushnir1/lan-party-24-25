@@ -2,7 +2,7 @@ extends Node
 @onready var video_stream_player: VideoStreamPlayer = $"../VideoTutorial/VideoStreamPlayer"
 @onready var video_tutorial: Node2D = $"../VideoTutorial"
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
-
+var fatto = true
 var elementi_completati = 0
 var punti = 0
 var element_scene = preload("res://LivelloChimica/scene/elemento.tscn")
@@ -73,6 +73,14 @@ var initial_count = 10
 var instance = element_scene.instantiate()
 var instanceTasks = task_scene.instantiate()
 var position : Vector2
+func _process(delta: float) -> void:
+	if (elementi_completati == 4 or $"../Control/Timer".is_stopped())and(fatto):
+		var tempo = $"../Control/Timer".time_left
+		if !$"../Control/Timer".is_stopped():
+			tempo = 90
+		print("Fine")
+		add_child(menu.creaMenu(90-tempo,punti,randi_range(0,1000)))
+		fatto = false
 func _ready():
 	audio_stream_player_2d.play()
 	video_stream_player.scale = Vector2(0.5,0.5)
@@ -90,6 +98,8 @@ func _ready():
 	var task4 = tasks[b];
 	tasks.remove_at(b)
 	taskTracker = [spawn_task(Vector2(0, 70), task1),spawn_task(Vector2(0, 140), task2),spawn_task(Vector2(0, 210), task3),spawn_task(Vector2(0, 280), task4) ]
+
+
 func spawn_element(position: Vector2, name):
 	instance = element_scene.instantiate()
 	instance.global_position = position
@@ -108,10 +118,7 @@ func spawn_element(position: Vector2, name):
 			taskTracker[i].completato = true
 			elementi_completati += 1
 		
-	if elementi_completati == 4:
-		print("Fine")
-		print($"../Control/Timer".time_left)
-		add_child(menu.creaMenu(90-int($"../Control/Timer".time_left),punti,randi_range(0,1000)))
+
 
 	
 

@@ -540,7 +540,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="Control"]
-wait_time = 90.0
+wait_time = 5.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
