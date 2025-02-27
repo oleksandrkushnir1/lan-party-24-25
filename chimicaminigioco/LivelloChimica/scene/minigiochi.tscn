@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=4 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://LivelloChimica/scripts/game_manager.gd" id="1_ftjyd"]
-[ext_resource type="Texture2D" uid="uid://dnw3g4o8gmyeq" path="res://LivelloChimica/assets/sottofondoSong/wp14559422-red-castle-wallpapers (3).jpg" id="2_t6fwc"]
+[ext_resource type="Texture2D" uid="uid://bbwpwvf0i3j85" path="res://LivelloChimica/assets/sfondi/leo-labenne-wb-alchemist2.jpg" id="2_5qjpc"]
 [ext_resource type="Texture2D" uid="uid://y2sbxkom5ow7" path="res://LivelloChimica/assets/Elementi/Zolfo.png" id="3_rbahs"]
 [ext_resource type="Texture2D" uid="uid://cow2tc66yksca" path="res://LivelloChimica/assets/icons8-question-mark-78.png" id="4_rbns6"]
 [ext_resource type="Texture2D" uid="uid://ek7mt2qltw1t" path="res://LivelloChimica/assets/Elementi/Cloro.png" id="4_t7qek"]
@@ -374,9 +374,9 @@ script = ExtResource("1_ftjyd")
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(571.763, 318.154)
-scale = Vector2(1.80387, 1.8047)
-texture = ExtResource("2_t6fwc")
+position = Vector2(576, 318)
+scale = Vector2(0.85166, 0.699029)
+texture = ExtResource("2_5qjpc")
 
 [node name="Label" type="Label" parent="."]
 light_mask = 2
