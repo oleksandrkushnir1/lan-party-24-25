@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 10
+
 var m = 1
 var y = 1
 var vf = true
@@ -11,13 +12,13 @@ func _physics_process(delta: float) -> void:
 		$"../Timer".start()
 
 	if !$"../Timer".is_stopped():
-		velocity.x = ((SPEED-((m*9.81)*y))*50)
+		velocity.x = ((SPEED - ((m * 9.81) * y)) * 50)
 	else:
 		velocity.x = 0
 
-	# Gravità inplementata
+	# Gravità implementata
 	velocity += get_gravity() * delta
-	
+
 	move_and_slide()
 
 func _on_button_button_down() -> void:

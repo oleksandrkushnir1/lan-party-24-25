@@ -70,6 +70,8 @@ stretch_mode = 0
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="button_down" from="Button" to="Player" method="_on_button_button_down"]
 [connection signal="button_down" from="Button" to="floor" method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="Player" method="_on_button_2_button_down"]
