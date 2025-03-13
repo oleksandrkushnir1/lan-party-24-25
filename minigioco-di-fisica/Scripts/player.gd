@@ -2,20 +2,28 @@ extends CharacterBody2D
 
 const SPEED = 10
 
+@onready var timer: Timer = $"../Timer"
+@onready var timer_2: Timer = $"../Timer2"
+@onready var label = $"../Label"
+
 var m = 1
 var y = 1
 var vf = true
 var _vf = true
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Conferma"):
-		$"../Timer".start()
+	if !timer_2.is_stopped():
+		label.visible = false
+		if Input.is_action_just_pressed("Conferma"):
+			timer.start()
 
-	if !$"../Timer".is_stopped():
-		velocity.x = ((SPEED - ((m * 9.81) * y)) * 50)
+		if !timer.is_stopped():
+			velocity.x = ((SPEED - ((m * 9.81) * y)) * 50)
+		else:
+			velocity.x = 0
 	else:
-		velocity.x = 0
-
+		label.visible = true
+	
 	# Gravità implementata
 	velocity += get_gravity() * delta
 

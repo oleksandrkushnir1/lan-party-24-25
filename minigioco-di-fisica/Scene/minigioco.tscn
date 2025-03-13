@@ -71,6 +71,16 @@ stretch_mode = 0
 one_shot = true
 
 [node name="Timer2" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 518.0
+offset_top = 58.0
+offset_right = 642.0
+offset_bottom = 81.0
+text = "Tempo scaduto!"
 
 [connection signal="button_down" from="Button" to="Player" method="_on_button_button_down"]
 [connection signal="button_down" from="Button" to="floor" method="_on_button_button_down"]
