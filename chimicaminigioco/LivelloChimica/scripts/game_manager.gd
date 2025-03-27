@@ -69,18 +69,22 @@ var combinazioni = {
 	"Cianuro di potassio": ["K","Cianuro/CN"], #esiste
 	}
 # Numero iniziale di elementi da spawnare
+@onready var timer: Timer = $"../Control/Timer"
+
 var initial_count = 10
 var instance = element_scene.instantiate()
 var instanceTasks = task_scene.instantiate()
 var position : Vector2
 func _process(delta: float) -> void:
 	if (elementi_completati == 4 or $"../Control/Timer".is_stopped())and(fatto):
-		var tempo = $"../Control/Timer".time_left
-		if !$"../Control/Timer".is_stopped():
-			tempo = 90
-		print("Fine")
-		add_child(menu.creaMenu(90-tempo,punti,randi_range(0,1000)))
-		fatto = false
+		if (taskTracker[0].puntiDati > 0 and taskTracker[1].puntiDati > 0 and taskTracker[2].puntiDati > 0 and taskTracker[3].puntiDati > 0)or $"../Control/Timer".is_stopped():
+			var tempo = $"../Control/Timer".time_left
+			if !$"../Control/Timer".is_stopped():
+				tempo = 90
+			print("Fine")
+			add_child(menu.creaMenu(90-timer.time_left,punti,randi_range(0,1000)))
+			fatto = false
+
 func _ready():
 	audio_stream_player_2d.play()
 	video_stream_player.scale = Vector2(0.5,0.5)
@@ -117,7 +121,7 @@ func spawn_element(position: Vector2, name):
 		if bho.base == name:
 			taskTracker[i].completato = true
 			elementi_completati += 1
-		
+
 
 
 	

@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=4 uid="uid://b1hysy784nfin"]
 
 [ext_resource type="Script" path="res://LivelloChimica/scripts/game_manager.gd" id="1_ftjyd"]
-[ext_resource type="Texture2D" uid="uid://bbwpwvf0i3j85" path="res://LivelloChimica/assets/sfondi/leo-labenne-wb-alchemist2.jpg" id="2_5qjpc"]
+[ext_resource type="Texture2D" uid="uid://dm3hv080qifcb" path="res://LivelloChimica/assets/sfondi/030aea97-retro-inspired-mad-scientist-s-lab-pixel-art-v-6-1-compressed.jpg" id="2_lbnwp"]
 [ext_resource type="Texture2D" uid="uid://y2sbxkom5ow7" path="res://LivelloChimica/assets/Elementi/Zolfo.png" id="3_rbahs"]
 [ext_resource type="Texture2D" uid="uid://cow2tc66yksca" path="res://LivelloChimica/assets/icons8-question-mark-78.png" id="4_rbns6"]
 [ext_resource type="Texture2D" uid="uid://ek7mt2qltw1t" path="res://LivelloChimica/assets/Elementi/Cloro.png" id="4_t7qek"]
@@ -374,9 +374,9 @@ script = ExtResource("1_ftjyd")
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(571, 316.5)
-scale = Vector2(0.844281, 0.702266)
-texture = ExtResource("2_5qjpc")
+position = Vector2(569.5, 316.5)
+scale = Vector2(1.12207, 0.625977)
+texture = ExtResource("2_lbnwp")
 
 [node name="Label" type="Label" parent="."]
 light_mask = 2
@@ -540,7 +540,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="Control"]
-wait_time = 90.0
+wait_time = 2.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -661,6 +661,9 @@ texture = ExtResource("5_3lro7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_bvd87")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="button_down" from="Label/S" to="GameManager" method="_on_s_button_down"]
 [connection signal="button_down" from="Label/Cl" to="GameManager" method="_on_cl_button_down"]

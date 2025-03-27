@@ -5,6 +5,7 @@ var lvl1 : String
 var lvl2 : String
 var counterlvl = 0
 var base : String
+var puntiDati = 0
 var completato = false
 var open = true
 var p = true
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 		print(str(get_parent().punti) + " punti")
 		$Button.hide()
 		$Label2.hide()
+		puntiDati = puntiDaDare
 		p = false
 	pass
 
